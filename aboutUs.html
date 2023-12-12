@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D DOLPHIN - ABOUTUS</title>
+
+    <style>
+        /* Your existing styles */
+
+        body {
+            background-color: rgb(123, 128, 128);
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            position: relative;
+
+        }
+        nav img{
+            width: 150px;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: 13px;
+            font-size: 13px;
+        }
+        .nav-links ul li::after{
+            content: '';
+            width: 0px;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .ceo{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .ceo h3{
+            font-size: 30px;
+        }
+        .ceo h4{
+            color: rgb(218, 175, 82);
+        }
+        .brand{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .brand h3{
+            font-size: 30px;
+        }
+        .brand h4{
+            color: rgb(218, 175, 82);
+        }
+        .media{
+            width: 90%;
+            color: #504a4a;
+            position: absolute;
+            top: 160%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .link{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .link:hover{
+            border: 1px solid #42403f;
+            background: #9b97cf;
+            transition: 1s;
+        }
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            font-family:"Arial",sans-serif;
+        }
+        .main{
+            background-color:rgb(164, 171, 171);
+            overflow:hidden;
+        }
+        .heading h1{
+            color:#df3b1e;
+            font-size:55px;
+            text-align:center;
+            margin-top:35px;
+
+        }
+        .container{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width:90%;
+            margin:65px auto;
+        }
+        .main-content{
+            flex:1;
+            width:600px;
+            margin:0px 25px;
+            animation:fadeInUp 2s ease;
+        }
+        .main-content h2{
+            font-size:38px;
+            margin-bottom:20px;
+            color:#333;
+        }
+        .main-content p{
+            font-size:24px;
+            line-height:1.5;
+            margin-bottom: 40px;
+            color:#fff;
+        }
+        .main-content button{
+            display:inline-block;
+            background-color:#cd3903;
+            color:#fff;
+            padding:12px 24px;
+            border-radius: 5px;
+            font-size: 20px;
+            border:none;
+            cursor:pointer;
+            transition: 0.3s ease;
+        }
+        .main-content button:hover{
+            background-color: #c1280d;
+            transform:scale(1.1);
+
+        }
+        .main-image{
+            flex:1;
+            width:600px;
+            margin:auto;
+            animation:fadeInRight 2s ease;
+        }
+        img{
+            width:100%;
+            height:auto;
+            border-radius: 10px;
+        }
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8c9494;
+            color: #fff;
+            padding: 1em;
+        }
+        #fb
+     {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+        margin-left: 500px;
+        border-radius: 50px;
+     }
+     #insta
+     {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+        margin-left: 70px;
+        border-radius: 50px;
+     }
+     #mail
+     {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+        margin-left: 70px;
+        border-radius: 50px;
+     }
+        @media screen and (max-width:768px) {
+            .heading h1{
+                font-size:45px;
+                margin-top:30px;
+            }
+            .main{
+                margin:0px;
+            }
+            .container{
+                width:100%;
+                flex-direction:column;
+                margin:0px;
+                padding:0px 40px;
+            }
+            .main-content{
+                width:100%;
+                margin:35px 0px;
+            }
+            .main-content h2{
+                font-size:30px;
+            }
+            .main-content p{
+                font-size:18px;
+                margin-bottom:20px;
+            }
+            .main-content button{
+                font-size:16px;
+                padding:8px 16px;
+            }
+            .main-image{
+                width:100%;
+            }
+        }
+    @keyframes fadeInUp{
+        0%{
+            opacity:0;
+            transform:translateY(50px);
+        }
+        100%{
+            opacity:1;
+            transform:translateY(0px);
+        }
+
+    }
+    @keyframes fadeInRight{
+        0%{
+            opacity:0;
+            transform:translateX(-50px);
+        }
+        100%{
+            opacity:1;
+            transform:translateX(0px);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="webhome.html"><img src="images/logo-1-removebg-preview-e1683393597719.png" alt="D DOLPHIN"></a>
+            <div class="nav-links">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="webhome.html">HOME</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="">ABOUTUS</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <!--<div class="ceo">
+            <h3>Founder Chairman & CEO of the company</h3>
+            <h4>Mr. NITISH SHIVHARE</h4>
+            <img src="images/ceo-q63vlyjn6squhblf8zizd17837uuh8exzxookw8xj8.jpeg" alt="ceo">
+            <p>The only international fashion designer in our company. A renowned, young, enthusiastic fashion designer.<br> Total 9 years in the business & still pumping out various ideas & guiding us towards the company goals. He is into western Collection & has many fashion weeks </p>   
+        </div>
+        <div class="brand">
+            <h3>Brand Ambassador of the company</h3>
+            <h4>Ms. NIHARICA RAIZADA</h4>
+            <img src="images/brand ambassador.jpeg" alt="">
+            <p>Our Bollywood actress is known for her charismatic personality and her ability to connect with her fans. She has been chosen by several popular brands as their brand ambassador, owing to her wide reach and influence in the entertainment industry.As a brand ambassador, our actress has been associated with various products and services, ranging from beauty and fashion to technology and healthcare. She brings her unique style and personality to each of these brands, making them more relatable and appealing to her fans.</p>
+        </div>
+        <div class="media">
+            <h2>Follow US On INSTAGARAM FOR MORE UPDATES</h2>
+            <a href="https://www.instagram.com/dakshitdolphin/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" class="link">INSTAGRAM</a>
+        </div>
+         
+    </section>-->
+    <section class="main">
+        <div class="heading">
+            <h1>
+                About Us
+            </h1>
+        </div>
+        <div class="container">
+            <div class="main-content">
+                <h2>Welcome To Our Website</h2>
+                <p>D.Dolphin will carry traditional, western,
+                    trendy, casuals, party wear, to create their
+                    unique brand image where you can find
+                    everything that you need. The greatest
+                    percentage of merchandise will be in
+                    apparel, followed by accessories and gifts.
+                    Management will rely on customer feedback,
+                    suggestions, and sales reports to introduce or
+                    eliminate certain brands, styles and sizes.</p>
+                    <a href="ou.html"> <button class="Contact-button">Learn More</button></a>
+            </div>
+            <div class="main-image">
+                <img src="a1.jpg">
+            </div>
+        </div>
+     </section>
+
+     <footer style="display: flex;">
+        <div style="display: flex;">
+            <div style="margin-left: -450px;"><h1>&copy; 2023 Fashion Shop  :</h1> </div>
+                <p style="margin-left:100px;margin-top:-10px;"><h2>Contact :</h2>  </p>
+                <p style="padding-left: 10px;"><br>&#9742; +91 7275394960<!-- Phone symbol: &#9742; -->
+                <br> &#9993; d.dolphin.pvt.ltd@gmail.com</p> <!-- Email symbol: &#9993; -->
+                <p style="margin-left:100px;margin-top:-10px;"><h2>Address :</h2>  </p>
+                <p style="padding-left: 10px;padding-top: -20px;"><br>&#127968; House No.186,<br>Gurguj Lajpatnagar,<br>Ward No.13,Near Punjab Sindh Bank, 
+                <br> Sumerpur, Hamirpur <br> Uttar Pradesh (210502),<br>INDIA</p> 
+        </div>
+            <div style="display: flex;margin-top: 200px;margin-left: -1300px;">
+                <p><a href="https://www.facebook.com/profile.php?id=100068623053211&mibextid=ZbWKwL"><img src="https://png.pngtree.com/element_our/md/20180518/md_5aff6081b74c8.jpg" id="fb" ></a></p>
+                <p><a href="https://www.instagram.com/dakshitdolphin/"><img src="https://freepngimg.com/thumb/instagram/118541-logo-instagram-png-download-free.png" id="insta" ></a></p>
+                <p><a href="nitishshivhare@ddolphins.com"><img src="https://static-00.iconduck.com/assets.00/gmail-icon-512x511-fih5xfbp.png" id="mail" ></a></p>
+            </div>    
+    </footer>
+    
+
+
+    
+</body>
+</html>
